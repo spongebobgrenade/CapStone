@@ -1,0 +1,15 @@
+import requests
+
+try:
+    print("Attempting to connect to Hugging Face...")
+    response = requests.get("https://huggingface.co", timeout=10)
+    print("✅ Success! Status code:", response.status_code)
+except Exception as e:
+    print("❌ Failed to connect to Hugging Face. Error:", e)
+
+try:
+    print("\nAttempting to connect to Google...")
+    response = requests.get("https://www.google.com", timeout=10)
+    print("✅ Success! Status code:", response.status_code)
+except Exception as e:
+    print("❌ Failed to connect to Google. Error:", e)
